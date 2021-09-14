@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactenos - Franco's Pet-Shop</title>
+    <script src="https://kit.fontawesome.com/58d99c8dac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/customs_dos.css">
+</head>
+<body id="app">
+    <header>
+        <input type="checkbox" id="toggle_navbar">
+        <label for="toggle_navbar">
+            <span id="open_toggle">&equiv;</span>
+            <span id="close_toggle">&#10006;</span>
+        </label>
+
+        <a href="index.html" class="contenedor_logo_titulo">
+            <img src="assets/schnauzer-logo.jpg" alt="schnauzer-logo">
+            <h1>FRANCO</h1>
+        </a>
+
+        <nav id="navbar">
+            <a href="index.html">INICIO</a>
+            <a href="farmacia.html">PRODUCTOS DE FARMACIA</a>
+            <a href="juguetes.html">JUGUETES</a>
+            <a href="contactenos.html" class="link_active">CONTACTENOS</a>
+        </nav>
+    </header>
+
+    <main class="main_formulario">
+        <div id="contenedor_formulario">
+            <h2>¡COMPLETA EL FORMULARIO Y TE CONTACTAREMOS!</h2>
+            <form id="app">
+                <fieldset>
+
+                    <fieldset class="contenedor_nombre_apellido">
+                        <label>
+                            Nombre*
+                            <input type="text" name="nombre" placeholder="Ingrese su nombre">
+                        </label>
+
+                        <label>
+                            Apellido*
+                            <input type="text" name="apellido" placeholder="Ingrese su apellido">
+                        </label>
+                    </fieldset>
+
+                    <label>
+                        Email*
+                        <input class="input_email" type="email" name="email" placeholder="Ingrese su correo electrónico">
+                    </label>
+
+                    <label>
+                        Número de teléfono*
+                        <input class="input_telefono" type="text" name="numero_telefono" placeholder="Ingrese su teléfono de contacto">
+                    </label>
+
+                    <label for="tipo_mascota" class="">¿Que mascota tenés?</label>
+                    <select name="tipo_mascota" id="tipo_mascota">
+                        <option value="gato">Gato</option>
+                        <option value="perro">Perro</option>
+                    </select>
+
+                    <textarea name="message" rows="5" cols="25" placeholder="¿Que te interesa saber?"></textarea>
+
+                    <button v-on:click="enviado" class="submit_form" type="button">Enviar formulario</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="contenedor_background_formulario"></div>
+    </main>
+
+    <footer id="footer">
+        <div>
+            <h3>DIRECCION</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.687100442925!2d-58.43257228515771!3d-34.61207296544652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1631501493003!5m2!1ses-419!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div id="container_redes">
+            <h3>REDES</h3>
+            <div id="container_iconos">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div>
+            <h3 id="preguntas_respuestas">PREGUNTAS Y RESPUESTAS</h3>
+            <a href="#" id="politicas_envio_link">Políticas de envío y devolución</a>
+        </div>
+
+        <p>&copy;Luis Maestre 2021</p>
+    </footer>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="vue/vue.js"></script>
+</body>
+</html>

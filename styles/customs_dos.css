@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+
+/* fuentes: 'Open Sans Condensed', sans-serif; 
+font-weigth: 300 y 700
+*/
+:root{
+    font-family:'Open Sans Condensed', sans-serif ;
+    font-weight: 300;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 15vh;
+    padding: 0 1.5rem;
+    border-bottom: solid 3px #e6e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* toggle botons */
+#toggle_navbar{
+    display: none;
+}
+
+label[for="toggle_navbar"] #open_toggle{
+    font-size:2.5rem;
+    color: #424141;
+}
+
+label[for="toggle_navbar"] #close_toggle{
+    display: none;
+    font-size:1.5rem;
+    color: #424141;
+
+}
+
+#toggle_navbar:checked + label #open_toggle{
+    display: none;
+}
+
+#toggle_navbar:checked + label #close_toggle{
+    display: block;
+}
+
+#navbar{
+    width: 100vw;
+    padding: 1rem;
+    background-color: #1f2325;
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    z-index: 1;
+    transform: translateY(-200%);
+    transition: all 400ms linear;
+}
+
+#toggle_navbar:checked ~ #navbar{
+    transform: translateY(0);
+}
+
+#navbar a ~ a{
+    margin-top: 1rem;
+}
+
+#navbar a{
+    letter-spacing: 2px;
+    color: white;
+    transition: all 300ms;
+}
+
+#navbar > .link_active{
+    border-bottom:1px solid;
+    color: #f87567;
+}
+
+header > .contenedor_logo_titulo{
+    display: flex;
+    align-items: center;
+}
+
+header .contenedor_logo_titulo img{
+    width: 80px;
+}
+
+header > .contenedor_logo_titulo > h1{
+    color:#1f2325;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+}
+
+/* estilos del main en index.html */
+main{
+    width:100%;
+    min-height: 67vh;
+}
+
+#container_main_home{
+    height: 67vh;
+    background-image: url("../assets/background-schnauzer.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container_main_home h2{
+    position: relative;
+    bottom: 1rem;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+#container_main_home p{
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: #0009;
+    padding: 1rem 0;
+}
+
+#container_main_home a{
+    display: block;
+    padding: 6px;
+    border: solid 2px;
+    background: #00000091;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color:white ;
+    position: relative;
+    top: 2rem;
+    transition: all 300ms;
+}
+
+#container_main_home a:hover{
+    color: #f87567;
+}
+/* fin de estilos del main en index.html */
+
+/* estilos del main en contactenos.html */
+#contenedor_formulario{
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedor_formulario h2{
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+form{
+    width: 100%;
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset{
+    border: none;
+}
+
+.contenedor_nombre_apellido{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+}
+
+input{
+    display: block;
+    width: 100%;
+    height: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+}
+
+.submit_form{
+    display: block;
+    width: 150px;
+    color: white;
+    background: #313030;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+select{
+    display: block;
+    width: 58%;
+    height: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+textarea{
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+/*fin estilos del main en contactenos.html */
+
+/* estilos articulos en venta */
+
+main section{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedor_articulo{
+    border: 1px solid #ccc;
+    width: 250px;
+    height: auto;
+    padding-bottom: .5rem;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nombre_producto{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #f87567;
+}
+
+.descripcion_producto{
+    text-align: justify;
+    padding: 0 .5rem;
+}
+
+.contenedor_articulo img{
+    width: 100%;
+}
+
+.precio_producto{
+    font-weight:700;
+}
+
+.caja_agregar_productos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    width: 30%;
+    margin: 0 auto;
+
+}
+
+.caja_agregar_productos button{
+    width: 100%;
+    height: 100%;
+    color: black;
+    border: 1px solid;
+}
+
+.cantidad_pedida{
+    border: 1px solid;
+    width: 100%;
+}
+
+/* fin estilos articulos en venta */
+
+/* footer styles */
+#footer{
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    position: relative;
+}
+
+#footer p{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    right: 2rem;
+}
+
+footer > div{
+    margin-bottom:2rem;
+}
+
+#footer h3{
+    color: #f87567;
+    letter-spacing: 3px;
+    font-size:1.3rem;
+    font-weight: 300;
+    margin-bottom: .5rem;
+}
+
+
+/* iconos */
+
+#container_iconos{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fab{
+    color:white;
+    font-size: 1.5rem;
+}
+
+/* fin iconos */
+
+#preguntas_respuestas{
+    margin-bottom: 2rem;
+}
+
+#politicas_envio_link{
+    display: inline-block;
+    color:white;
+    text-decoration: underline;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    transition: all 300ms;
+}
+
+#politicas_envio_link:hover{
+    color: rgb(25, 33, 248);
+}
+
+
+@media only screen and (min-width: 768px){
+
+    header > .contenedor_logo_titulo{
+        width: 40%;
+        justify-content: start;
+    }
+
+    #toggle_navbar:checked + label #close_toggle,
+    label[for="toggle_navbar"] #open_toggle{
+        display: none;
+    }
+
+    #navbar{
+        width: 100%;
+        background-color: transparent;
+        position: initial;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateY(0%);
+    }
+    
+    #navbar .link_active{
+        color: #f87567;
+    }
+    
+    #navbar a ~ a{
+        margin-top: 0;
+    }
+
+    #navbar a {
+        color: black;
+        font-size: 1.1rem;
+    }
+    #navbar a:hover{
+        color: #f87567;
+    }
+
+    #container_main_home{
+        height:72vh;
+    }
+
+    #container_main_home h2{
+        font-size: 2.7rem;
+        right: 2rem;
+    }
+
+    #container_main_home p{
+        font-size: 1.5rem;
+        padding:2rem 6rem;
+    }
+
+    #footer{
+        flex-direction: row;
+    }
+
+    #footer h3{
+        font-size: 1.5rem;
+    }
+
+    #footer > div{
+        text-align: center;
+    }
+
+    #container_redes{
+        width: 30%;
+    }
+
+    .fab{
+        font-size: 2.5rem;
+    }
+
+    #politicas_envio_link{
+        font-size: 1.5rem;
+    }
+
+    /* estilos del formulario */
+
+    #contenedor_formulario h2{
+        font-size: 2rem;
+    }
+
+    form{
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    #container_main_home{
+        height:90vh;
+        background-position-y:-76px;
+    }
+
+    #container_main_home h2{
+        font-weight:700;
+        font-size: 4rem;
+        right: 8rem;
+        bottom: 5rem;
+    }
+
+    #container_main_home p {
+        font-size: 1.9rem;
+        padding: 3rem 7rem;
+    }
+
+    #footer h3{
+        font-size:2rem;
+    }
+
+    /* estilos formulario.html */
+
+    .main_formulario{
+        display: flex;
+    }
+
+    #contenedor_formulario{
+        width: 50%;
+    }
+
+    #contenedor_background_formulario{
+        width: 50%;
+        min-height: 100%;
+        background-image: url("../assets/formulario-background.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+
+/* fuentes: 'Open Sans Condensed', sans-serif; 
+font-weigth: 300 y 700
+*/
+:root{
+    font-family:'Open Sans Condensed', sans-serif ;
+    font-weight: 300;
+}
+
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+    
+}
+
+#navbar_container{
+    padding: 0 2rem;
+    border-bottom: solid 3px #e6e2e2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar_container > a{
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+#navbar_container a img{
+    width: 150px;
+}
+
+#navbar_container > a > h1{
+    letter-spacing: 3px;
+}
+
+#navbar_container > nav {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#navbar_container > nav a {
+    color: black;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+#navbar_container > nav > .link_active{
+    display:inline-block;
+    border-bottom:1px solid black;
+    padding-bottom:2px;
+}
+
+
+/* estilos del main */
+
+main{
+    display: flex;
+    min-height: 81vh;
+}
+
+#container_main_izquierda{
+    min-height: 100%;
+    min-width: 50%;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#container_main_izquierda h2{
+    font-weight: 300;
+    font-size: 3rem;
+    color: #424141;
+    letter-spacing: 3px;
+    position: relative;
+    top: 4rem;
+}
+
+#container_main_izquierda p{
+    color: black;
+    text-align: justify;
+    width: 82%;
+    font-size: 1.3rem;
+    position: relative;
+    top: 1.7rem;
+}
+
+#container_main_izquierda a{
+    display: block;
+    padding: 6px;
+    border-radius: 10px;
+    border: solid 2px;
+    color: black;
+    letter-spacing: 3px;
+    transition: all 300ms;
+}
+
+#container_main_izquierda a:hover{
+    color: white;
+    background-color: rgba(33, 32, 32, 0.672);
+}
+
+#container_main_derecha{
+    min-height: 100%;
+    min-width: 50%;
+    background-image: url("../assets/background-schnauzer.jpg");
+    background-size: cover;
+    background-position:center;
+}
+
+/* imagenes gatos inicio */
+
+#contenedor_imagenes_gatos{
+    min-width: 100%;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: end;
+}
+
+#imagen_gatos_dos{
+    width: 300px;
+    height: 250px;
+    background-image: url("../assets/gatos-inicio-dos.jpg");
+    background-size: cover;
+    background-position:center;
+}
+
+/* footer */
+
+#footer{
+    min-height: 20rem;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+#footer div{
+    text-align: center;
+}
+
+#footer h3{
+    color: white;
+    letter-spacing: 3px;
+    font-size:1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+/* iconos */
+#container_redes{
+    width:25%;
+}
+
+#container_iconos{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fab{
+    font-size: 2.5rem;
+}
+
+#politicas_envio_link{
+    text-decoration: underline;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    transition: all 300ms;
+}
+
+#politicas_envio_link:hover{
+    color: rgb(25, 33, 248);
+}
